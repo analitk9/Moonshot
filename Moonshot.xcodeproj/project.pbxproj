@@ -19,6 +19,7 @@
 		64AEEDCA2C13150100C0187F /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEEDC92C13150100C0187F /* Color-Theme.swift */; };
 		64AEEDCC2C131D3A00C0187F /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEEDCB2C131D3A00C0187F /* MissionView.swift */; };
 		64AEEDCE2C13231500C0187F /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEEDCD2C13231500C0187F /* AstronautView.swift */; };
+		64AEEDD02C146A1B00C0187F /* CrewMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEEDCF2C146A1B00C0187F /* CrewMemberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		64AEEDC92C13150100C0187F /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		64AEEDCB2C131D3A00C0187F /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		64AEEDCD2C13231500C0187F /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		64AEEDCF2C146A1B00C0187F /* CrewMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMemberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				64AEEDA92C11DCBF00C0187F /* ContentView.swift */,
 				64AEEDCB2C131D3A00C0187F /* MissionView.swift */,
 				64AEEDCD2C13231500C0187F /* AstronautView.swift */,
+				64AEEDCF2C146A1B00C0187F /* CrewMemberView.swift */,
 				64AEEDB92C12F8E900C0187F /* Astronaut.swift */,
 				64AEEDC92C13150100C0187F /* Color-Theme.swift */,
 				64AEEDC32C12FCCE00C0187F /* MIssion.swift */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64AEEDD02C146A1B00C0187F /* CrewMemberView.swift in Sources */,
 				64AEEDCC2C131D3A00C0187F /* MissionView.swift in Sources */,
 				64AEEDBA2C12F8E900C0187F /* Astronaut.swift in Sources */,
 				64AEEDCE2C13231500C0187F /* AstronautView.swift in Sources */,
