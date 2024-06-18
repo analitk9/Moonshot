@@ -23,35 +23,13 @@ struct ContentView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(missions) { mission in
-                        NavigationLink {
-                           MissionView(mission: mission, astronauts: astronauts)
-                        } label: {
-                            VStack {
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                VStack {
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundStyle(.white)
-                                    Text(mission.formattedLaunchDate)
-                                        .font(.caption)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
-                            }
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            }
-                            
+                        NavigationLink(value: mission) {
+                            ExtractedView(mission: mission)
                         }
                     }
+                }
+                .navigationDestination(for: Mission.self) { mission in
+                    MissionView(mission: mission, astronauts: astronauts)
                 }
                 .navigationTitle("Moonshot")
                 .background(.darkBackground)
@@ -65,4 +43,33 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct ExtractedView: View {
+    let mission: Mission
+    var body: some View {
+        VStack {
+            Image(mission.image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .padding()
+            VStack {
+                Text(mission.displayName)
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                Text(mission.formattedLaunchDate)
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.5))
+            }
+            .padding(.vertical)
+            .frame(maxWidth: .infinity)
+            .background(.lightBackground)
+        }
+        .clipShape(.rect(cornerRadius: 10))
+        .overlay {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.lightBackground)
+        }
+    }
 }
